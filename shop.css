@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+:root {
+    --body: #e2cfb5;
+    --white: #fffbff;
+  }
+body{
+    background: #ecececdb;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    background: #5995fd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+@media screen and (max-width: 980px) {
+    .header{
+        padding: 0 50px;
+    }
+}
+.header > h1{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+}
+.hmenu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+}
+.hmenu>a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+.hmenu>button{
+    outline: none;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 30px;
+}
+.header > a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+.headermain-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    padding: 0 3rem;
+}
+.headermain-text > div > button, .addbtn, .founded{
+    border-radius: 10px;
+    outline: none;
+    background-color: #5995fd;
+    color: #fff;
+    width: auto;
+    padding: 0 10px;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.headermain-text > button:hover, .addbtn:hover, .founded:hover{
+    background: #467fe0;
+}
+.delete{
+    border-radius: 10px;
+    outline: none;
+    background-color: #fd3b3b;
+    color: #fff;
+    width: 40px;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.delete:hover{
+    background-color: #f02d2d;
+}
+.btnact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+.btnac{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.hbtncon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.headermain-text > h3{
+    color: #5995fd;
+    font-size: clamp(1rem, 0.6875rem + 1vw, 1.25rem);
+    font-weight: 700;
+    margin: 0;
+}
+.main-con{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 20px 3rem;
+    gap: 20px;
+    width: 100%;
+}
+.main-con .card {
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05, 1.05);
+}
+.productimgcon{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #676767;
+}
+.productimgcon>img{
+    height: 100%;
+}
+@media screen and (max-width: 980px) {
+    .main-con {
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .headermain-text > div > button{
+        width: auto;
+        height: 30px;
+        font-size: 12px;
+        padding: 0 8px;
+    }
+}
+
+
+/* Hero start*/
+#hero {
+    height: 50vh;
+    width: 100wh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+  }
+  
+  #hero .slider {
+    width: 100%;
+    max-width: 100vw;
+    height: 40vh;
+    margin: 0 3rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+  
+  #hero .list {
+    width: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    transition: 1s;
+  }
+  
+  #hero .list .item {
+    width: 100vw; /* Set the width to 100% */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #hero .list img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  #hero .slider-nav {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #hero .slider-nav button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: var(--bodywhite);
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #hero .dots {
+    position: absolute;
+    bottom: 10px;
+    color: #5995fd;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  #hero .dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #5995fd;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+  }
+  
+  #hero .dots li.active {
+    width: 30px;
+  }
+  /* hero end */
